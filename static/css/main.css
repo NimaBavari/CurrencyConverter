@@ -1,0 +1,155 @@
+/**
+*    Responsive Design
+*/
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	color: #222222;
+}
+
+table {
+	width: 100%;
+	white-space: nowrap;
+}
+
+input, select {
+	font-family: 'Libre Franklin', sans-serif;
+	padding: 8px 10px 8px 10px;
+	font-size: 13px;
+	border: 1px solid #EEEEEE;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+input {
+	background-color: #DACBDF;
+}
+
+select {
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    background: #DACBDF url('../img/down-arrow.png') no-repeat calc(100% - 10px) 50%;
+}
+
+input:hover, select:hover {
+	border: 1px solid green;
+}
+
+input:focus, select:focus {
+	background-color: #DACBFF;
+	border: 1px solid #6667F8;
+}
+
+input[type="submit"] {
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	padding: 8px 15px 8px 15px;
+	width: auto;
+	border: 1px solid #EEEEEE;
+	color: #222222;
+}
+
+input[type="submit"]:hover {
+	background: #4691A4;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+#container h3 {
+	text-align: center;
+}
+
+.image-holder {
+	width: 40%;
+	margin: 0 auto;
+}
+
+.image-holder img {
+	width: 100%;
+}
+
+.error-field, .error-field:focus {
+	border: 1px solid red !important;
+    box-shadow: inherit;
+}
+
+.error-box {
+	background: #e7e7e7;
+    padding: 4px;
+}
+
+.warning {
+	color: #FF0000;
+}
+
+.result {
+	padding-top: 15px;
+	font-weight: bold;
+}
+
+@media (min-width:320px) {
+	#container {
+		background-color: #EEEEEE;
+		border: 3px solid #888888;
+		padding: 10px 10px 10px 10px;
+		width: 92%;
+		z-index: 1;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width:481px) {
+	#container {
+		background-color: #EEEEEE;
+		padding: 10px 10px 10px 10px;
+		border: 3px solid #888888;
+		width: 80%;
+		z-index: 1;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width:641px) {
+	#container {
+		background-color: #EEEEEE;
+		padding: 10px 10px 10px 10px;
+		border: 3px solid #888888;
+		width: 68%;
+		z-index: 1;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width:961px) {
+	#container {
+		background-color: #EEEEEE;
+		padding: 10px 10px 10px 10px;
+		border: 3px solid #888888;
+		width: 56%;
+		z-index: 1;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width:1025px) {
+	#container {
+		background-color: #EEEEEE;
+		padding: 10px 10px 10px 10px;
+		border: 3px solid #888888;
+		width: 44%;
+		z-index: 1;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width:1281px) {
+	#container {
+		background-color: #EEEEEE;
+		padding: 10px 10px 10px 10px;
+		border: 3px solid #888888;
+		width: 30%;
+		z-index: 1;
+		margin: 0 auto;
+	}
+}

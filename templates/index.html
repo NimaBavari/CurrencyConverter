@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}"
+    </head>
+    <body>
+        <div id="container">
+	        <div class="image-holder">
+		        <img src="{{ url_for('static', filename='img/EnData.png') }}" />
+	        </div>
+            <h3>{{ title.upper() }}</h3>
+            <form action="" method="POST" novalidate>
+                {{ form.hidden_tag() }}
+                <table>
+                    {% for field in form %}
+                        {% if not field.type in ['SubmitField', 'CSRFTokenField'] %}
+                            {% if field.errors %}
+                                {% for error in field.errors %}
+                                    <tr>
+                                        <td class="error-box">
+                                            <span class="warning">{{ error }}</span>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td>{{ field(class="error-field", placeholder=field.label.text) }}</td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td>{{ field(placeholder=field.label.text) }}</td>
+                                </tr>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    
+                    <tr>
+                        <td>{{ form.submit }}</td>
+                    </tr>
+                </table>
+            </form>
+            {% if form.validate_on_submit() %}
+                <div class="result">
+                    {{ result }} {{ form.second_unit.data }}
+                </div>
+        {% endif %}
+        </div>
+    </body>
+</html>
